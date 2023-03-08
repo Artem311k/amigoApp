@@ -21,7 +21,7 @@ public class Notification {
                         String customerName,
                         String email) {
         this.customerName = customerName;
-        this.isFraudster = isFraudster;
+        this.isAlreadyRegistered = isAlreadyRegistered;
         this.isFraudster = isFraudster;
         this.sentAt = LocalDateTime.now();
         this.sentToEmail = email;
