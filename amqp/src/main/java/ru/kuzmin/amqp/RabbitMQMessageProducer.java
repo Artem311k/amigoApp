@@ -21,4 +21,5 @@ public class RabbitMQMessageProducer {
         log.info("Published to {} using routingKey {}. Payload {}",
                 exchange, routingKey, payload);
     }
+
 }

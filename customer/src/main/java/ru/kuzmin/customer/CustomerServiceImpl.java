@@ -18,7 +18,8 @@ public class CustomerServiceImpl implements CustomerService {
 
     private final CustomerRepository customerRepository;
     private final FraudClient fraudClient;
-    private final NotificationClient notificationClient;
+
+//    private final NotificationClient notificationClient;
     private final RabbitMQMessageProducer rabbitMQMessageProducer;
 
     @Override
