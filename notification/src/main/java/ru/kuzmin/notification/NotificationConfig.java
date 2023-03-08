@@ -1,4 +1,4 @@
-package ru.kuzmin.clients.notification;
+package ru.kuzmin.notification;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;

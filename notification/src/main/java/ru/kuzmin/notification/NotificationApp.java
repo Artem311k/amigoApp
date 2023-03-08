@@ -1,4 +1,4 @@
-package ru.kuzmin.clients.notification;
+package ru.kuzmin.notification;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,7 +6,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication(
         scanBasePackages = {
-                "ru.kuzmin.amigoApp.",
+                "ru.kuzmin.notification",
                 "ru.kuzmin.amqp"
         }
 )

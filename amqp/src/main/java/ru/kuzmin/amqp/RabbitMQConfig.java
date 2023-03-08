@@ -1,4 +1,4 @@
-package ru.kuzmin.amigoApp;
+package ru.kuzmin.amqp;
 
 
 import lombok.RequiredArgsConstructor;

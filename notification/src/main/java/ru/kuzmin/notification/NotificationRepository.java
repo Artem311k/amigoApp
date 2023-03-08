@@ -1,4 +1,4 @@
-package ru.kuzmin.clients.notification;
+package ru.kuzmin.notification;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

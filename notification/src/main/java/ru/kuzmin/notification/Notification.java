@@ -1,4 +1,4 @@
-package ru.kuzmin.clients.notification;
+package ru.kuzmin.notification;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

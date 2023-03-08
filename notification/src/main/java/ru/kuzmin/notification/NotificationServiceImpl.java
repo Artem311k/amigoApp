@@ -1,8 +1,9 @@
-package ru.kuzmin.clients.notification;
+package ru.kuzmin.notification;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import ru.kuzmin.clients.notification.NotificationRequest;
 
 @Slf4j
 @Service
