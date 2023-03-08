@@ -17,12 +17,15 @@ import java.time.LocalDateTime;
 public class Notification {
 
     public Notification(boolean isFraudster,
-                        String customerName, String email) {
+                        boolean isAlreadyRegistered,
+                        String customerName,
+                        String email) {
         this.customerName = customerName;
+        this.isFraudster = isFraudster;
         this.isFraudster = isFraudster;
         this.sentAt = LocalDateTime.now();
         this.sentToEmail = email;
-        createMessage(isFraudster);
+        createMessage(isFraudster, isAlreadyRegistered);
 
     }
 
@@ -44,6 +47,7 @@ public class Notification {
 
     private String message;
 
+    private boolean isAlreadyRegistered;
     private LocalDateTime sentAt;
 
     private String sentToEmail;
@@ -53,14 +57,19 @@ public class Notification {
     private boolean isFraudster;
 
 
-    private void createMessage(boolean isFraudster) {
-        if (isFraudster) {
-            this.message = ("Hello, " + this.customerName + "!. " +
-                    "You are a fraudster so go away! Sent to email:" + sentToEmail);
+    private void createMessage(boolean isFraudster, boolean isAlreadyRegistered) {
+        if (isAlreadyRegistered) {
+            this.message = ("Hello, " + this.customerName + "! You are already registered!");
         } else {
-            this.message = ("Hello, " + this.customerName + "!. " +
-                    "Welcome to service! Sent to email:" + sentToEmail);
+            if (isFraudster) {
+                this.message = ("Hello, " + this.customerName + "!. " +
+                        "You are a fraudster so go away! Sent to email:" + sentToEmail);
+            } else {
+                this.message = ("Hello, " + this.customerName + "!. " +
+                        "Welcome to service! Sent to email:" + sentToEmail);
+            }
         }
+
 
     }
 }

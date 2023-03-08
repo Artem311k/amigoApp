@@ -14,4 +14,6 @@ public class NotificationRequest {
 
     private boolean isFraudster;
 
+    private boolean isAlreadyRegistered;
+
 }

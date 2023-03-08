@@ -17,13 +17,17 @@ public class NotificationServiceImpl implements NotificationService {
 
         Notification notification = new Notification(
                 notificationRequest.isFraudster(),
+                notificationRequest.isAlreadyRegistered(),
                 notificationRequest.getName(),
                 notificationRequest.getEmail());
         notificationRepository.saveAndFlush(notification);
-        if(notificationRequest.isFraudster()) {
-            log.info("User " + notificationRequest.getName() + "detected as a fraudster");
+        if (notificationRequest.isAlreadyRegistered()) {
+            log.info("User " + notificationRequest.getName() + " is already registered");
+        } else {
+            if (notificationRequest.isFraudster()) {
+                log.info("User " + notificationRequest.getName() + "detected as a fraudster");
+            }
         }
         log.info("MESSAGE - '" + notification.getMessage() + "' WAS SENT");
-
     }
 }

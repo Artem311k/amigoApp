@@ -21,7 +21,7 @@ public class FraudCheckHistoryServiceImpl
         log.info("checking is a fraud email {}", email);
         Optional<FraudCheckHistory> fraudCheckHistory =
                 fraudCheckHistoryRepository.getFraudCheckHistoryByCustomerEmail(email);
-        if(fraudCheckHistory.isPresent()) {
+        if (fraudCheckHistory.isPresent()) {
             log.info("Customer with id " + email + " already in database and is a fraudster");
             return true;
         }
