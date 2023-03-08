@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: notification
+    name: NOTIFICATION
 
   datasource:
     username: postgres
@@ -28,3 +28,11 @@ eureka:
       defaultZone: http://localhost:8761/eureka
     register-with-eureka: true
     fetch-registry: true
+
+rabbitmq:
+  exchanges:
+    internal: internal.exchange
+  queues:
+    notification: notification.queue
+  routing-keys:
+    internal-notification: internal.notification.routing-key

@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: fraud
+    name: FRAUD
 
   datasource:
     username: postgres
